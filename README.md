@@ -51,6 +51,35 @@ A real-time multiplayer chess platform built using WebSockets and `chess.js` to 
 
 ### Installation
 1. **Clone the repository**  
-   Clone the repository to your local machine using the following command:
-   ```bash
-   git clone <repository_url>
+2. **Install dependencies**
+   npm install
+### Running the Server 
+1. **Start the Server**
+
+---
+
+## WebSocket API
+
+### Message Types
+
+| **Message Type** | **Description**                                           |
+|-------------------|-----------------------------------------------------------|
+| `INIT_GAME`       | Initializes the game and assigns colors to the players.   |
+| `MOVE`            | Sent by a player to make a move on the board.             |
+| `GAME_OVER`       | Notifies both players of the game's result (winner/loser).|
+
+### Example Message Payloads
+
+#### 1. `INIT_GAME`
+When the game starts, each player receives this message:
+```json
+{
+  "type": "init_game",
+  "payload": {
+    "color": "white" // or "black"
+  }
+}
+```
+
+
+
