@@ -40,3 +40,16 @@ A real-time multiplayer chess platform built using WebSockets and `chess.js` to 
 ├── index.ts           # WebSocket server entry point.
 ├── messages.ts        # Defines constants for WebSocket message types.
 ├── package.json       # Project dependencies and scripts.
+
+---
+
+## Setup and Installation
+
+### Prerequisites
+- Node.js (v16 or above)
+
+### Installation
+1. **Clone the repository**  
+   Clone the repository to your local machine using the following command:
+   ```bash
+   git clone <repository_url>
