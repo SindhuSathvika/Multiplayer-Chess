@@ -41,6 +41,7 @@ A real-time multiplayer chess platform built using WebSockets and `chess.js` to 
 ├── messages.ts        # Defines constants for WebSocket message types.
 ├── package.json       # Project dependencies and scripts.
 
+```
 ---
 
 ## Setup and Installation
