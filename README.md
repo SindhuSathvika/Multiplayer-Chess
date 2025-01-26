@@ -68,18 +68,49 @@ A real-time multiplayer chess platform built using WebSockets and `chess.js` to 
 | `MOVE`            | Sent by a player to make a move on the board.             |
 | `GAME_OVER`       | Notifies both players of the game's result (winner/loser).|
 
-### Example Message Payloads
+## Example Flow
 
-#### 1. `INIT_GAME`
-When the game starts, each player receives this message:
-```json
-{
-  "type": "init_game",
-  "payload": {
-    "color": "white" // or "black"
-  }
-}
-```
+### 1. Player 1 Connects
+- Player 1 connects to the server.
+- They are set as the `pendingUser`, waiting for the second player.
+
+### 2. Player 2 Connects
+- Player 2 connects to the server.
+- A game is created with Player 1 and Player 2, and they are assigned their respective colors (`white` for Player 1 and `black` for Player 2).
+
+### 3. Gameplay
+- Players alternate sending `MOVE` messages to make their moves.
+- The server validates each move, ensuring it follows the chess rules and updates the opponent with the new move.
+
+### 4. Game Over
+- The server detects game-ending conditions, such as:
+  - Checkmate
+  - Stalemate
+  - Draw (e.g., insufficient material, threefold repetition)
+- A `GAME_OVER` message is sent to both players, indicating the winner (or a draw).
+
+## Future Enhancements
+
+- **Frontend Integration**: Build a user interface for better interaction, making the game accessible through a web interface.
+- **Ranking System**: Introduce an ELO-based player ranking system to track and compare player performance.
+- **Reconnection Support**: Allow players to reconnect to their game if disconnected mid-game to ensure uninterrupted play.
+- **Spectator Mode**: Enable others to watch live games, adding a spectator feature for an engaging experience.
+
+## Technologies Used
+
+- **Node.js**: Server-side runtime for handling the WebSocket server and managing the game logic.
+- **ws**: WebSocket library for establishing real-time communication between the server and the clients.
+- **chess.js**: Library for chess rules and move validation, ensuring each move is legal and the game state is accurately maintained.
+- **TypeScript**: For type-safe development, providing better code maintainability and error prevention.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- **chess.js**: Chessboard logic and validation.
+- **ws**: WebSocket implementation.
 
 
 
