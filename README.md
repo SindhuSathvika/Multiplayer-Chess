@@ -93,6 +93,15 @@ A real-time multiplayer chess platform built using WebSockets and `chess.js` to 
 
 ---
 
+## Screenshots
+
+![Gameplay Screenshot](path_to_screenshot.png)
+
+### Example Gameplay in Action:
+![Gameplay GIF](path_to_gif.gif)
+
+---
+
 ## Future Enhancements
 
 - **Frontend Integration**: Build a user interface for better interaction, making the game accessible through a web interface.
