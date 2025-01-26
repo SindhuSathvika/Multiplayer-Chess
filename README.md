@@ -68,6 +68,8 @@ A real-time multiplayer chess platform built using WebSockets and `chess.js` to 
 | `MOVE`            | Sent by a player to make a move on the board.             |
 | `GAME_OVER`       | Notifies both players of the game's result (winner/loser).|
 
+---
+
 ## Example Flow
 
 ### 1. Player 1 Connects
@@ -89,12 +91,16 @@ A real-time multiplayer chess platform built using WebSockets and `chess.js` to 
   - Draw (e.g., insufficient material, threefold repetition)
 - A `GAME_OVER` message is sent to both players, indicating the winner (or a draw).
 
+---
+
 ## Future Enhancements
 
 - **Frontend Integration**: Build a user interface for better interaction, making the game accessible through a web interface.
 - **Ranking System**: Introduce an ELO-based player ranking system to track and compare player performance.
 - **Reconnection Support**: Allow players to reconnect to their game if disconnected mid-game to ensure uninterrupted play.
 - **Spectator Mode**: Enable others to watch live games, adding a spectator feature for an engaging experience.
+
+---
 
 ## Technologies Used
 
@@ -103,9 +109,13 @@ A real-time multiplayer chess platform built using WebSockets and `chess.js` to 
 - **chess.js**: Library for chess rules and move validation, ensuring each move is legal and the game state is accurately maintained.
 - **TypeScript**: For type-safe development, providing better code maintainability and error prevention.
 
+---
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
 
 ## Acknowledgments
 
